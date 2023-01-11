@@ -66,4 +66,11 @@ def uploaded_file_algo3():
       f = request.files['file']
       f.save((f.filename))
       st = str(f.filename)
-      return load_from_json_algorithm3(st)
+      file = open(f.filename, 'r')
+      file_contents = file.read()
+      ans = (file_contents)
+      file.close()
+      json_algo_ans = load_from_json_algorithm3(st)
+      data = json.loads(ans)
+      return render_template('input3.html', input = data ,output = json_algo_ans)
+      
