@@ -1,0 +1,4 @@
+2023-01-11 05:53:57,093: WARNING: algorithm2: Line 94: maximum greater than max budget
+2023-01-11 05:53:57,094: DEBUG: algorithm2: Line 95: 12.6 is the greatest budget
+2023-01-11 05:59:14,093: WARNING: algorithm2: Line 94: maximum greater than max budget
+2023-01-11 05:59:14,094: DEBUG: algorithm2: Line 95: 12.6 is the greatest budget
