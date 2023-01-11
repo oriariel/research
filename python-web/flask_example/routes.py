@@ -37,8 +37,7 @@ def uploaded_file_algo1():
       ans = (file_contents)
       file.close()
       json_algo_ans = load_from_json_algorithm1(st)
-      results = "Input:"+'\n'+ ans + '\n' + json_algo_ans
-      return (results)
+      return render_template('input.html', input = json.loads(ans), output = json_algo_ans)
 
 @app.route('/upload2')
 def upload_file_algo2():
@@ -55,8 +54,7 @@ def uploaded_file_algo2():
       ans = (file_contents)
       file.close()
       json_algo_ans = load_from_json_algorithm2(st)
-      results = "Input:"+'\n'+ ans + '\n' + json_algo_ans
-      return (results)
+      return render_template('input.html', input = json.loads(ans), output = json_algo_ans)
     
 @app.route('/upload3')
 def upload_file_algo3():
@@ -68,5 +66,4 @@ def uploaded_file_algo3():
       f = request.files['file']
       f.save((f.filename))
       st = str(f.filename)
-      print(load_from_json_algorithm3(st)[1])
       return load_from_json_algorithm3(st)

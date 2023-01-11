@@ -1,0 +1,27 @@
+
+<form>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Budget</th>
+                <th>Preferences</th>
+                <th>Courses</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in input.students %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.budget }}</td>
+                    <td>{{ student.preferences }}</td>
+                    <td>{{ student.courses }}</td>
+                    <td>{{ student.year }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <p>Output: {{ output }} </p>
+  </form>

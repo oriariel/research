@@ -33,7 +33,7 @@ def load_from_json_algorithm1(file_name: str):
                 time_to = s["time_to"]
             if "seed" in s:
                 seed = s["seed"]
-            return "Output: " + str(algorithm1(students, courses, max_budget))
+            return str(algorithm1(students, courses, max_budget))
     except Exception as e:
         print(e)
         return str(False)
@@ -70,7 +70,7 @@ def load_from_json_algorithm2(file_name: str):
             price_vector = json.loads(s["price_vector"])
             maximum = s["maximum"]
             eps = s["eps"]
-            return "Output: "+str(algorithm2(price_vector,maximum,eps, students,courses))
+            return str(algorithm2(price_vector,maximum,eps, students,courses))
     except Exception as e:
         print(e)
         return str(False)
